@@ -1,1 +1,38 @@
- .header {}
+ .header {
+     padding: 10px 0;
+     align-items: center;
+     flex-direction: column;
+     @media screen and @desktop-width-small {
+        flex-direction: row;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and @desktop-width-small {
+            flex-direction: row;
+            align-items: initial;
+        }    
+    }
+
+    &__item {
+        padding-top: 10px;
+        &:last-child {
+            padding-bottom: 10px;
+            @media screen and @desktop-width-small {
+                padding-bottom: 0px;
+            }
+        }
+        @media screen and @desktop-width-small {
+            padding: 0 0 0 30px;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        color: #000000;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+ }

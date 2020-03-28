@@ -27,7 +27,8 @@
 
 
 body{
-    display: flex;
+	display: flex;
+	flex-direction: column;
     min-width: 320px;
     min-height: 100vh;
     padding: 0;
@@ -43,6 +44,18 @@ button {
     &:focus {
 		outline: none !important;
 	}
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	width: 71%;
+	max-width: 1000px;
+	margin: 0 auto;
 }
 
 

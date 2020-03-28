@@ -11,73 +11,84 @@
 </head>
 
 <body>
-    <header class="header">
-        <a class="logo" href="/">
-            <img alt="logo" title="logo" src="">
+    <header class="header container">
+        <a class="logo header__logo" href="/">
+            <img alt="logo" title="logo" src="img/logo.svg">
         </a>
         <nav class="nav header__nav">
-            <ul class="">
-                <li>
-                    <a href="#"> Menu Item 1 </a>
+            <ul class="nav__items header__items">
+                <li class="nav__item header__item">
+                    <a class="nav__link header__link" href="#"> Menu Item 1 </a>
                 </li>
-                <li>
-                    <a href="#"> Menu Item 2</a>
+                <li class="nav__item  header__item">
+                    <a class="nav__link header__link" href="#"> Menu Item 2</a>
                 </li>
-                <li>
-                    <a href="#">Menu Item 3 </a>
+                <li class="nav__item  header__item">
+                    <a class="nav__link header__link" href="#">Menu Item 3 </a>
                 </li>
-                <li>
-                    <a href="#"> Menu Item 4</a>
+                <li class="nav__item  header__item">
+                    <a class="nav__link header__link" href="#"> Menu Item 4</a>
                 </li>
             </ul>
         </nav>
-        <a> LOG IN / SIGN UP</a>
+        <a href="#" class="header__link"> LOG IN / SIGN UP</a>
     </header>
-    <form class="">
-        <div class="form-control">
-            <input required class="form-control__input" type="text">
-            <label class="form-control__label">Length</label>
-            <span class="form-control__line"></span>
-        </div>
-        <div class="form-control">
-            <input required class="form-control__input" type="text">
-            <label class="form-control__label">Limit</label>
-            <span class="form-control__line"></span>
-        </div>
-        <button class="btn"> Start </button>
-    </form>
+
+    <main class="main">
+        <section class="search-bar">
+            <div class="container">
+                <form class="form search-bar__form">
+                    <div class="form-control">
+                        <input required class="form-control__input" type="text">
+                        <label class="form-control__label">Length</label>
+                        <span class="form-control__line"></span>
+                    </div>
+                    <div class="form-control">
+                        <input required class="form-control__input" type="text">
+                        <label class="form-control__label">Limit</label>
+                        <span class="form-control__line"></span>
+                    </div>
+                    <button class="btn search-bar__btn"> Start </button>
+                </form>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
-        <nav class="footer__nav">
-            <p>Menu 1 </p>
-            <ul class="">
-                <li>
-                    <a href="#"> Menu Item 1 </a>
-                </li>
-                <li>
-                    <a href="#"> Menu Item 2</a>
-                </li>
-                <li>
-                    <a href="#">Menu Item 3 </a>
-                </li>
-                <li>
-                    <a href="#"> Menu Item 4</a>
-                </li>
-            </ul>
-        </nav>
-        <nav class="footer__nav">
-            <p>Menu 2</p>
-            <ul>
-                <li> <a href="#"> Menu Item 1 </a></li>
-                <li> <a href="#"> Menu Item 1 </a></li>
-            </ul>
-        </nav>
-        <nav class="footer__nav">
-            <p>Contacts</p>
-            <ul>
-                <li><a href="#"> Phone </a></li>
-                <li><a href="#"> Email </a></li>
-            </ul>
-        </nav>
-        <span class="footer__copyright">© Lev Tolstoy</span>
+        <div class="container">
+            <nav class="nav footer__nav">
+                <p class="nav__title">Menu 1 </p>
+                <ul class="nav__items footer__items">
+                    <li class="nav__item footer__item">
+                        <a class="nav__link footer__link" href="#"> Menu Item 1 </a>
+                    </li>
+                    <li class="nav__item footer__item">
+                        <a class="nav__link  footer__link" href="#"> Menu Item 2</a>
+                    </li>
+                    <li class="nav__item footer__item">
+                        <a class="nav__link  footer__link" href="#">Menu Item 3 </a>
+                    </li>
+                    <li class="nav__item footer__item">
+                        <a class="nav__link  footer__link" href="#"> Menu Item 4</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="nav footer__nav">
+                <p class="nav__title">Menu 2</p>
+                <ul class="nav__items footer__items">
+                    <li class="nav__item footer__item"> <a class="nav__link  footer__link" href="#"> Menu Item 1 </a>
+                    </li>
+                    <li class="nav__item footer__item"> <a class="nav__link  footer__link" href="#"> Menu Item 1 </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="nav footer__nav">
+                <p class="nav__title">Contacts</p>
+                <ul class="nav__items footer__items">
+                    <li class="nav__item footer__item"><a class="nav__link  footer__link" href="#"> Phone </a></li>
+                    <li class="nav__item footer__item"><a class="nav__link  footer__link" href="#"> Email </a></li>
+                </ul>
+            </nav>
+            <span class="footer__copyright">© Lev Tolstoy</span>
+        </div>
     </footer>
 </body>
