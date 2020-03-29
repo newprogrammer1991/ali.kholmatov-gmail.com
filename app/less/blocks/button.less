@@ -1,7 +1,7 @@
 .btn {
     min-width: 200px;
     height: 32px;
-    background: #5DA9E0;
+    background: @main-blue;
     border: none;
     border-radius: 0px;
     color: #FFFFFF;
@@ -10,12 +10,14 @@
     overflow: hidden;
     text-align: center;
     cursor: pointer;
+    
     &:hover {
         color: #ffffff;
         background-color: #f5638c;
     }
+
     &:disabled {
-        background: #E5E5E5;
+        background: @main-gray;
         pointer-events: none;
     }
 }

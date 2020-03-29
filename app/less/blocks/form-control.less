@@ -39,7 +39,7 @@
     bottom: 0;
     left: 0;
     z-index: 200;
-    background-color:  #E5E5E5;
+    background-color: @main-gray;
     pointer-events: none;
     &:before,
     &:after {
@@ -50,11 +50,11 @@
         bottom: 0;
         height: 2px;
         width: 0;
-        background: #E5E5E5;
+        background: @main-gray;
         transition: width .25s ease-in-out;
         .form-control__input:focus ~ & {
             width: 50%;
-            background: #5DA9E0;
+            background: @main-blue;
         }
     }
     
