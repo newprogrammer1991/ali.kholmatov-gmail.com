@@ -35,8 +35,8 @@ gulp.task("images", function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src('*.js', {cwd: srcPath} )
-    .pipe(gulp.dest(buildPath))
+    return gulp.src('js/*', { cwd: srcPath })
+    .pipe(gulp.dest("js", { cwd: buildPath }))
 })
 
 gulp.task('serve', function () {
@@ -47,7 +47,7 @@ gulp.task('serve', function () {
         notify: false,
         ui: false
     });
-    gulp.watch('*.js', {cwd: srcPath}, gulp.series('js')).on('change', browserSync.reload);
+    gulp.watch('**/*.js', { cwd: path.join(srcPath, 'js') }, gulp.series('js')).on('change', browserSync.reload);
     gulp.watch("**/*.less", { cwd: path.join(srcPath, 'less') }, gulp.series('less')).on('change', browserSync.reload);
     gulp.watch('*.html', { cwd: srcPath }, gulp.series('html')).on('change', browserSync.reload);
 

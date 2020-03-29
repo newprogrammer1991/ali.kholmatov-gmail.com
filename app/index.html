@@ -39,18 +39,24 @@
             <div class="container">
                 <form class="form search-bar__form">
                     <div class="form-control">
-                        <input required class="form-control__input" type="text">
+                        <input id="length" required class="form-control__input" type="text">
                         <label class="form-control__label">Length</label>
                         <span class="form-control__line"></span>
                     </div>
                     <div class="form-control">
-                        <input required class="form-control__input" type="text">
+                        <input id="limit" required class="form-control__input" type="text">
                         <label class="form-control__label">Limit</label>
                         <span class="form-control__line"></span>
                     </div>
-                    <button class="btn search-bar__btn"> Start </button>
+                    <button id="sub" disabled type="submit" class="btn search-bar__btn"> Start </button>
                 </form>
             </div>
+        </section>
+        <section class="content container">
+            <div class="cards">
+                
+            </div>
+
         </section>
     </main>
     <footer class="footer">
@@ -91,4 +97,5 @@
             <span class="footer__copyright">© Lev Tolstoy</span>
         </div>
     </footer>
+    <script src="js//main.js"></script>
 </body>

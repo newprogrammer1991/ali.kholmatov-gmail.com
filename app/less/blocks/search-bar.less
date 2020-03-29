@@ -1,5 +1,9 @@
 .search-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
     width: 100%;
+    background-color: white;
     box-shadow:  0px 2px 4px rgba(0, 0, 0, 0.1);
     padding-bottom: 21px;
 
@@ -12,6 +16,10 @@
             align-items: flex-end;
             flex-direction: row;
         }
+        &--disabled {
+            pointer-events: none;
+            opacity: 0.7;
+        }
     }
 
     .form-control {
@@ -23,6 +31,10 @@
     
     &__btn {
         width: 100%;
+        .search-bar__form--disabled & {
+            background-color: #E5E5E5;
+        }
+
         @media screen and @tablet-width-lg {
             width: auto;
            }
