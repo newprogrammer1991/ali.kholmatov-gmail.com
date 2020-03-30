@@ -5,11 +5,11 @@ import { queue } from "./queue";
 let progress = 0;
 const funcMapper = (title, index) =>
   new Promise((resolve) => {
+    const length = getLength();
     setTimeout(() => {
       resolve();
       progress++;
       const sentence = splitText(index);
-      const length = getLength();
       update(index, progress, length, sentence);
     }, Math.round(Math.random() * 9000) + 1000);
     render(title, index, length);
