@@ -4,18 +4,18 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/index.js"
+    main: "./src/index.js",
   },
   output: {
     path: path.join(__dirname, "../build"),
-    filename: "[name].bundle.js"
+    filename: "[name].bundle.js",
   },
   mode: "development",
   devServer: {
     contentBase: path.join(__dirname, "../build"),
     compress: true,
     port: 3000,
-    overlay: true
+    overlay: true,
   },
   devtool: "cheap-module-eval-source-map",
   module: {
@@ -24,8 +24,8 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader" // transpiling our JavaScript files using Babel and webpack
-        }
+          loader: "babel-loader", // transpiling our JavaScript files using Babel and webpack
+        },
       },
       {
         test: /\.less$/,
@@ -34,19 +34,19 @@ module.exports = {
           "css-loader", // translates CSS into CommonJS
           "less-loader", // Loader for webpack to process CSS with PostCSS
           // "sass-loader" // compiles Sass to CSS, using Node Sass by default
-        ]
+        ],
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts/'
-            }
-          }
-        ]
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpe?g|gif)$/i,
@@ -55,10 +55,10 @@ module.exports = {
             loader: "file-loader", // This will resolves import/require() on a file into a url and emits the file into the output directory.
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/"
-            }
+              outputPath: "assets/",
+            },
           },
-        ]
+        ],
       },
       {
         test: /\.html$/,
@@ -66,11 +66,11 @@ module.exports = {
           loader: "html-loader",
           options: {
             attrs: ["img:src", ":data-src"],
-            minimize: true
-          }
-        }
-      }
-    ]
+            minimize: true,
+          },
+        },
+      },
+    ],
   },
   plugins: [
     // CleanWebpackPlugin will do some clean up/remove folder before build
@@ -79,7 +79,7 @@ module.exports = {
     // The plugin will generate an HTML5 file for you that includes all your webpack bundles in the body using script tags
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      filename: "index.html"
+      filename: "index.html",
     }),
-  ]
+  ],
 };
