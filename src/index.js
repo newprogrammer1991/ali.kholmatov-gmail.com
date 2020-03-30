@@ -1,2 +1,2 @@
-import './styles/style.less';
-import './scripts/main';
+import "./styles/style.less";
+import "./scripts/main";
